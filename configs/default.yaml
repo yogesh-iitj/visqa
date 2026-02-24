@@ -1,0 +1,38 @@
+pipeline:
+  grounder: "gdino"             # gdino | owlvit | ensemble
+  sam2_model_cfg: "sam2_hiera_large.yaml"
+  frame_stride: 1               # Process every N frames
+  propagation_mode: "full"      # full | keyframe_only
+  max_objects_per_query: 3      # Max detections per query per frame
+  render_output: true
+
+grounding_dino:
+  model_size: "swinb"           # swint | swinb
+  box_threshold: 0.30
+  text_threshold: 0.25
+  config_path: null             # auto-detect
+  checkpoint_path: null         # auto-detect from weights/
+
+owlvit:
+  model_name: "google/owlvit-base-patch32"
+  box_threshold: 0.10
+
+sam2:
+  model_cfg: "sam2_hiera_large.yaml"
+  checkpoint: null              # auto-detect from weights/
+  multimask_output: true
+  stability_score_thresh: 0.95
+
+visualization:
+  mask_alpha: 0.40
+  show_boxes: true
+  show_masks: true
+  show_labels: true
+  show_scores: true
+  font_scale: 0.6
+
+output:
+  save_masks: true
+  save_boxes: true
+  save_video: true
+  video_codec: "mp4v"

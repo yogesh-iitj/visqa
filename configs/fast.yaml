@@ -1,0 +1,13 @@
+pipeline:
+  grounder: "owlvit"
+  sam2_model_cfg: "sam2_hiera_tiny.yaml"
+  frame_stride: 2
+  propagation_mode: "keyframe_only"
+  max_objects_per_query: 2
+
+grounding_dino:
+  box_threshold: 0.25
+
+sam2:
+  model_cfg: "sam2_hiera_tiny.yaml"
+  multimask_output: false

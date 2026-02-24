@@ -1,0 +1,43 @@
+defaults:
+  - _self_
+
+training:
+  epochs: 20
+  batch_size: 2
+  learning_rate: 1.0e-5
+  weight_decay: 1.0e-4
+  clip_grad_norm: 1.0
+  warmup_epochs: 2
+  scheduler: "cosine"           # cosine | step | plateau
+
+data:
+  clip_length: 8
+  frame_stride: 3
+  image_size: 512
+  val_split: 0.1
+  num_workers: 4
+  augmentation:
+    horizontal_flip: true
+    color_jitter: true
+    random_crop: false
+
+model:
+  grounder_type: "gdino"
+  sam2_model_cfg: "sam2_hiera_large.yaml"
+  freeze_sam2: true             # Keep SAM2 frozen (recommended for fine-tuning)
+  freeze_text_encoder: true     # Keep CLIP text encoder frozen
+  adapter_dim: 512
+  adapter_num_heads: 8
+  adapter_num_layers: 2
+
+loss:
+  seg_dice_weight: 1.0
+  seg_focal_weight: 1.0
+  box_giou_weight: 2.0
+  box_l1_weight: 5.0
+
+logging:
+  log_interval: 10
+  save_interval: 1              # Save checkpoint every N epochs
+  use_wandb: false
+  wandb_project: "visqa"
