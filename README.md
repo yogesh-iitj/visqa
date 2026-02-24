@@ -16,21 +16,21 @@
 
 ---
 
-## ✨ Features
+##  Features
 
-- 🔍 **Text-Queried Segmentation** — Describe any object in natural language (e.g. *"the red car on the left"*) and get pixel-level masks
-- 📦 **Bounding Box Grounding** — Tight bounding boxes derived from segmentation masks for every frame
-- 🎯 **Multi-Object Tracking** — Track multiple query objects simultaneously across long videos
-- 🕰️ **Temporal Consistency** — SAM2-powered propagation for smooth, consistent masks over time
-- 🖼️ **Frame-level & Clip-level** — Works on single frames or full video clips
-- 🔌 **Modular Architecture** — Swap in different vision-language backbones (CLIP, DINO, OWL-ViT)
-- 🏋️ **Custom Training** — Fine-tune on your own video+annotation datasets
-- 🌐 **Gradio Demo** — Interactive browser UI out of the box
-- 📊 **Evaluation Suite** — J&F, mIoU, tracking metrics built in
+-  **Text-Queried Segmentation** — Describe any object in natural language (e.g. *"the red car on the left"*) and get pixel-level masks
+-  **Bounding Box Grounding** — Tight bounding boxes derived from segmentation masks for every frame
+-  **Multi-Object Tracking** — Track multiple query objects simultaneously across long videos
+-  **Temporal Consistency** — SAM2-powered propagation for smooth, consistent masks over time
+-  **Frame-level & Clip-level** — Works on single frames or full video clips
+-  **Modular Architecture** — Swap in different vision-language backbones (CLIP, DINO, OWL-ViT)
+-  **Custom Training** — Fine-tune on your own video+annotation datasets
+-  **Gradio Demo** — Interactive browser UI out of the box
+-  **Evaluation Suite** — J&F, mIoU, tracking metrics built in
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
                      ┌─────────────────────────────────────────┐
@@ -66,7 +66,7 @@
 
 ---
 
-## 🚀 Quickstart
+##  Quickstart
 
 ### 1. Installation
 
@@ -135,7 +135,7 @@ visqa demo
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 visqa/
@@ -199,15 +199,15 @@ visqa/
 
 | Dataset | Task | Status |
 |---------|------|--------|
-| [Ref-DAVIS 2017](https://davischallenge.org/) | Referring Video Segmentation | ✅ |
-| [YouTube-VIS](https://youtube-vos.org/dataset/vis/) | Video Instance Segmentation | ✅ |
-| [MeViS](https://henghuiding.github.io/MeViS/) | Motion Expression Segmentation | ✅ |
-| [HC-STVG](https://github.com/tzhhhh123/HC-STVG) | Spatio-Temporal Video Grounding | ✅ |
-| Custom | Any | ✅ |
+| [Ref-DAVIS 2017](https://davischallenge.org/) | Referring Video Segmentation | yes |
+| [YouTube-VIS](https://youtube-vos.org/dataset/vis/) | Video Instance Segmentation | yes |
+| [MeViS](https://henghuiding.github.io/MeViS/) | Motion Expression Segmentation | yes |
+| [HC-STVG](https://github.com/tzhhhh123/HC-STVG) | Spatio-Temporal Video Grounding | yes |
+| Custom | Any | no |
 
 ---
 
-## 🏋️ Training on Custom Data
+##  Training on Custom Data
 
 See **[docs/TRAINING.md](docs/TRAINING.md)** for the full guide. Quick version:
 
@@ -270,7 +270,7 @@ python scripts/evaluate.py \
 
 ---
 
-## 🔧 Configuration
+## Configuration
 
 Key config options in `configs/default.yaml`:
 
@@ -295,7 +295,7 @@ sam2:
 
 ---
 
-## 📈 Benchmarks
+## Benchmarks
 
 Results on Ref-DAVIS 2017 val set:
 
@@ -307,7 +307,7 @@ Results on Ref-DAVIS 2017 val set:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) first.
 
@@ -322,13 +322,13 @@ isort visqa/ scripts/
 
 ---
 
-## 📜 License
+##  License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 This project builds on top of amazing open-source work:
 - [SAM2](https://github.com/facebookresearch/sam2) by Meta AI
@@ -338,13 +338,4 @@ This project builds on top of amazing open-source work:
 
 ---
 
-## 📝 Citation
 
-```bibtex
-@misc{visqa2024,
-  title={ViSQA: Video Segmentation and Query Anchoring},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourname/visqa}
-}
-```
